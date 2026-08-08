@@ -1,0 +1,159 @@
+.header {
+  position: relative;
+  z-index: 100;
+
+  width: 100%;
+
+  background: rgba(17, 17, 38, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(20px);
+}
+
+.header-inner {
+  max-width: 1250px;
+  height: 76px;
+
+  margin: 0 auto;
+  padding: 0 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #ffffff;
+
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-mark {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #806cff,
+    #58cfc5
+  );
+
+  font-size: 14px;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav a {
+  color: #9291aa;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+/* ACTIONS */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  height: 39px;
+
+  padding: 0 17px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.login-btn {
+  color: #b5b4c8;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.signup-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #17162b;
+
+  background: #ffffff;
+
+  border: none;
+}
+
+.signup-btn span {
+  font-size: 15px;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  background: #e9e7ff;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .login-btn {
+    display: none;
+  }
+
+  .signup-btn {
+    padding: 0 15px;
+  }
+}

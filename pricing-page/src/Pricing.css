@@ -1,0 +1,901 @@
+/* =====================================================
+   PRICING
+===================================================== */
+
+.pricing {
+  position: relative;
+  width: 100%;
+
+  min-height: 900px;
+
+  padding: 28px 20px 70px;
+
+  overflow: hidden;
+
+  background: #171717;
+  color: #ffffff;
+
+  isolation: isolate;
+}
+
+
+/* =====================================================
+   TOP TEXT
+===================================================== */
+
+.pricing-top {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-intro {
+  margin: 0;
+
+  color: #eeeeee;
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 400;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =====================================================
+   BILLING SWITCH
+===================================================== */
+
+.billing {
+  display: flex;
+  align-items: center;
+
+  margin-top: 70px;
+  padding: 3px;
+
+  border: 1px solid #242424;
+  border-radius: 100px;
+
+  background: #151515;
+
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.35),
+    0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.billing button {
+  height: 31px;
+
+  min-width: 90px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: transparent;
+
+  color: #d2d2d2;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.billing button:hover {
+  color: #ffffff;
+}
+
+.billing button.active {
+  background: #ffffff;
+
+  color: #202020;
+
+  box-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   BOOK AREA
+===================================================== */
+
+.book-area {
+  position: relative;
+
+  width: 100%;
+  max-width: 1100px;
+
+  height: 555px;
+
+  margin: 4px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  perspective: 1800px;
+}
+
+
+/* =====================================================
+   BOOK
+===================================================== */
+
+.pricing-book {
+  position: relative;
+
+  width: 1000px;
+  height: 500px;
+
+  transform-style: preserve-3d;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* =====================================================
+   EACH PAGE
+===================================================== */
+
+.pricing-page {
+  position: absolute;
+
+  top: 50%;
+
+  width: 320px;
+  height: 378px;
+
+  transform-style: preserve-3d;
+
+  transform-origin: center center;
+
+  transition:
+    transform 0.9s cubic-bezier(0.2, 0.75, 0.2, 1),
+    filter 0.5s ease,
+    z-index 0s;
+
+  will-change: transform;
+}
+
+
+/* =====================================================
+   LEFT PAGE
+===================================================== */
+
+.pricing-page-1 {
+  left: 76px;
+
+  z-index: 2;
+
+  transform:
+    translateY(-50%)
+    rotateY(13deg)
+    rotateZ(-6deg);
+}
+
+
+/* =====================================================
+   CENTER PAGE
+===================================================== */
+
+.pricing-page-2 {
+  left: 340px;
+
+  z-index: 5;
+
+  width: 340px;
+  height: 460px;
+
+  transform:
+    translateY(-50%)
+    translateZ(65px);
+}
+
+
+/* =====================================================
+   RIGHT PAGE
+===================================================== */
+
+.pricing-page-3 {
+  left: 604px;
+
+  z-index: 2;
+
+  transform:
+    translateY(-50%)
+    rotateY(-13deg)
+    rotateZ(6deg);
+}
+
+
+/* =====================================================
+   BOOK COVERS
+===================================================== */
+
+.book-cover {
+  position: absolute;
+
+  z-index: 0;
+
+  inset: -12px;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  transform: translateZ(-12px);
+
+  background: #5b5b5b;
+
+  box-shadow:
+    0 30px 55px rgba(0, 0, 0, 0.4);
+
+  pointer-events: none;
+}
+
+
+/* LEFT COVER */
+
+.basic .book-cover {
+  background:
+    linear-gradient(
+      150deg,
+      #737373 0%,
+      #525252 45%,
+      #343434 100%
+    );
+}
+
+
+/* CENTER COVER */
+
+.pro .book-cover {
+  background:
+    linear-gradient(
+      145deg,
+      #676767 0%,
+      #4c4c4c 55%,
+      #343434 100%
+    );
+}
+
+
+/* RIGHT COVER */
+
+.team .book-cover {
+  background:
+    linear-gradient(
+      30deg,
+      #363636 0%,
+      #575757 50%,
+      #777777 100%
+    );
+}
+
+
+.cover-shine {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.12),
+      transparent 30%,
+      transparent 70%,
+      rgba(255, 255, 255, 0.04)
+    );
+}
+
+
+/* =====================================================
+   FRONT PAGE
+===================================================== */
+
+.page-face {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  background:
+    linear-gradient(
+      145deg,
+      #353535 0%,
+      #2a2a2a 42%,
+      #222222 100%
+    );
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  transform: translateZ(2px);
+
+  backface-visibility: hidden;
+}
+
+
+/* CENTER PAGE SLIGHTLY LIGHTER */
+
+.pro .page-face {
+  background:
+    linear-gradient(
+      145deg,
+      #3d3d3d 0%,
+      #303030 50%,
+      #292929 100%
+    );
+}
+
+
+/* =====================================================
+   PAGE LIGHT
+===================================================== */
+
+.page-face::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.06),
+      transparent 28%,
+      transparent 72%,
+      rgba(255, 255, 255, 0.025)
+    );
+}
+
+
+/* =====================================================
+   PAGE INNER
+===================================================== */
+
+.page-inner {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+
+  padding: 43px 35px 30px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =====================================================
+   PLAN TITLE
+===================================================== */
+
+.plan-title {
+  color: #bdbdbd;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: center;
+
+  letter-spacing: 0.01em;
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.page-inner h3 {
+  margin: 18px 0 0;
+
+  color: #ffffff;
+
+  text-align: center;
+
+  font-size: 52px;
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.plan-subtitle {
+  min-height: 27px;
+
+  margin-top: 12px;
+
+  color: #b6b6b6;
+
+  text-align: center;
+
+  font-size: 11px;
+  line-height: 1.35;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.plan-features {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.plan-feature {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: #d2d2d2;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.check {
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #eeeeee;
+
+  font-size: 16px;
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.plan-button {
+  display: flex;
+  align-items: center;
+
+  width: 150px;
+  height: 45px;
+
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 4px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: #ffffff;
+
+  color: #171717;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.plan-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.button-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #292929;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+.plan-button > span:last-child {
+  flex: 1;
+
+  text-align: center;
+
+  margin-right: 8px;
+}
+
+
+/* =====================================================
+   BOOK HOVER — CLOSED → OPEN
+===================================================== */
+
+.book-area:hover .pricing-page-1 {
+  transform:
+    translateY(-50%)
+    translateX(-42px)
+    rotateY(36deg)
+    rotateZ(-3deg)
+    translateZ(10px);
+}
+
+
+.book-area:hover .pricing-page-2 {
+  transform:
+    translateY(-50%)
+    translateZ(90px)
+    scale(1.01);
+}
+
+
+.book-area:hover .pricing-page-3 {
+  transform:
+    translateY(-50%)
+    translateX(42px)
+    rotateY(-36deg)
+    rotateZ(3deg)
+    translateZ(10px);
+}
+
+
+/* =====================================================
+   INDIVIDUAL PAGE HOVER
+===================================================== */
+
+.pricing-page:hover {
+  filter: brightness(1.08);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.pricing-bottom {
+  position: relative;
+  z-index: 10;
+
+  margin-top: -12px;
+
+  text-align: center;
+}
+
+.pricing-bottom p {
+  margin: 0;
+
+  color: #999999;
+
+  font-size: 11px;
+  line-height: 1.45;
+
+  font-weight: 600;
+}
+
+.pricing-bottom p span {
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.pricing-divider {
+  width: 214px;
+  height: 1px;
+
+  margin: 14px auto 18px;
+
+  background: #404040;
+}
+
+.pricing-bottom strong {
+  color: #9c9c9c;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1400px) {
+  .pricing {
+    padding-top: 30px;
+  }
+
+  .book-area {
+    max-width: 1150px;
+    height: 570px;
+  }
+
+  .pricing-book {
+    transform: scale(1.05);
+  }
+}
+
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 1100px) {
+  .book-area {
+    height: 520px;
+  }
+
+  .pricing-book {
+    transform: scale(0.9);
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+  .pricing {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .pricing-intro {
+    font-size: 13px;
+  }
+
+  .billing {
+    margin-top: 45px;
+  }
+
+  .book-area {
+    height: 500px;
+  }
+
+  .pricing-book {
+    transform: scale(0.72);
+  }
+
+  .book-area:hover .pricing-page-1 {
+    transform:
+      translateY(-50%)
+      translateX(-30px)
+      rotateY(30deg)
+      rotateZ(-3deg);
+  }
+
+  .book-area:hover .pricing-page-3 {
+    transform:
+      translateY(-50%)
+      translateX(30px)
+      rotateY(-30deg)
+      rotateZ(3deg);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+  .pricing {
+    min-height: auto;
+
+    padding-top: 45px;
+    padding-bottom: 65px;
+  }
+
+  .pricing-intro {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .pricing-intro br {
+    display: none;
+  }
+
+  .billing {
+    margin-top: 35px;
+  }
+
+  .billing button {
+    min-width: 82px;
+  }
+
+  .book-area {
+    height: auto;
+
+    margin-top: 45px;
+
+    display: block;
+
+    perspective: none;
+  }
+
+  .pricing-book {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    transform: none !important;
+  }
+
+  .pricing-page,
+  .pricing-page-1,
+  .pricing-page-2,
+  .pricing-page-3 {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: 440px;
+
+    margin: 0;
+
+    transform: none !important;
+  }
+
+  .pricing-page-2 {
+    order: -1;
+
+    height: 455px;
+  }
+
+  .book-cover {
+    display: block;
+  }
+
+  .page-inner {
+    padding: 38px 30px 28px;
+  }
+
+  .page-inner h3 {
+    font-size: 50px;
+  }
+
+  .book-area:hover .pricing-page-1,
+  .book-area:hover .pricing-page-2,
+  .book-area:hover .pricing-page-3 {
+    transform: none !important;
+  }
+
+  .pricing-bottom {
+    margin-top: 45px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 390px) {
+  .pricing {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .pricing-intro {
+    font-size: 11px;
+  }
+
+  .billing button {
+    min-width: 76px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .pricing-page,
+  .pricing-page-1,
+  .pricing-page-2,
+  .pricing-page-3 {
+    height: 425px;
+  }
+
+  .pricing-page-2 {
+    height: 440px;
+  }
+
+  .page-inner {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .page-inner h3 {
+    font-size: 46px;
+  }
+
+  .plan-feature {
+    font-size: 10px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-page,
+  .pricing-book,
+  .billing button,
+  .plan-button {
+    transition: none;
+  }
+}
+.book-area:hover .pricing-page-1 {
+  transform:
+    translateY(-50%)
+    translateX(-42px)
+    rotateY(36deg)
+    rotateZ(-3deg);
+}
+
+.book-area:hover .pricing-page-3 {
+  transform:
+    translateY(-50%)
+    translateX(42px)
+    rotateY(-36deg)
+    rotateZ(3deg);
+}
